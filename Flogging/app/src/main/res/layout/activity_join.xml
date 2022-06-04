@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_gray"
+    tools:context=".JoinActivity">
+
+    <ImageButton
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_back_btn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="15dp"
+        android:background="android:color/transparent"/>
+
+    <LinearLayout
+        android:layout_alignTop="@id/backBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <TextView
+            android:id="@+id/login_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/gmarketsansttfbold"
+            android:text="회원가입"
+            android:textColor="@color/darker_green"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/email"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_shape_input_box"
+            android:ems="20"
+            android:fontFamily="@font/scdream5"
+            android:hint="이메일"
+            android:inputType="textPersonName"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_gray"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_shape_input_box"
+            android:ems="20"
+            android:fontFamily="@font/scdream5"
+            android:hint="비밀번호"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_gray"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/password_check"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_shape_input_box"
+            android:ems="20"
+            android:fontFamily="@font/scdream5"
+            android:hint="비밀번호 확인"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_gray"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/local"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/ic_shape_input_box"
+            android:ems="20"
+            android:fontFamily="@font/scdream5"
+            android:hint="지역명"
+            android:inputType="text"
+            android:paddingLeft="15dp"
+            android:textColor="@color/text_gray"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginRight="-10dp"
+        android:background="@drawable/ic_shape_main_button"
+        android:backgroundTint="@color/main_green"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:text="회원가입" />
+
+</RelativeLayout>

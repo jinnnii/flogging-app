@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/login_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="120dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/gmarketsansttfbold"
+        android:textSize="30sp"
+        android:lineSpacingExtra="5dp"
+        android:textColor="@color/darker_green"
+        android:text="쓰다담과\n함께 달려요" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="20"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/ic_shape_input_box"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/text_gray"
+        android:textStyle="bold"
+        android:inputType="textPersonName"
+        android:hint="이메일" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:ems="20"
+        android:textSize="17sp"
+        android:layout_marginBottom="10dp"
+        android:paddingLeft="15dp"
+        android:background="@drawable/ic_shape_input_box"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/text_gray"
+        android:textStyle="bold"
+        android:inputType="textPassword"
+        android:hint="비밀번호" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/loginBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_shape_main_button"
+        android:backgroundTint="@color/main_green"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        android:text="로그인" />
+
+    <TextView
+        android:id="@+id/joinBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:textSize="17sp"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/darker_green"
+        android:text="회원가입" />
+</LinearLayout>
