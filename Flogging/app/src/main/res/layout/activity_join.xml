@@ -15,7 +15,7 @@
         app:srcCompat="@drawable/ic_back_btn"
         android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
-        android:background="android:color/transparent"/>
+        android:background="#00ffffff"/>
 
     <LinearLayout
         android:layout_alignTop="@id/backBtn"

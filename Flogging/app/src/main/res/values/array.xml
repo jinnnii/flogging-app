@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="feedback_array">
+        <item>없다</item>
+        <item>거의 없다</item>
+        <item>보통이다</item>
+        <item>조금 많다</item>
+        <item>매우 많다</item>
+    </string-array>
+</resources>

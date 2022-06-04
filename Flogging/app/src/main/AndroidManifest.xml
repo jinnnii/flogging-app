@@ -19,6 +19,15 @@
         android:theme="@style/Theme.Flogging"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".map.CustomSpinnerAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".map.MapFeedbackActivity"
+            android:exported="false" />
+        <activity
+            android:name=".map.MapResultActivity"
+            android:exported="false" />
+        <activity
             android:name=".JoinActivity"
             android:exported="false" />
         <activity
