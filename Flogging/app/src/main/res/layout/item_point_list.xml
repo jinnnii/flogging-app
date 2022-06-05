@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_gray">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/text_gray"
+        android:text="2022.06.01" />
+
+    <TextView
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/scdream5"
+        android:textColor="@color/main_green"
+        android:text="500 P" />
+</LinearLayout>

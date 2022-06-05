@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="30dp"
-    android:clipToPadding="false"
     android:background="@color/background_gray"
 
     tools:context=".mypage.MypageFragment">
@@ -109,6 +108,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:fontFamily="@font/scdream5"
                         android:text="1:1 문의" />
                 </LinearLayout>
 
@@ -131,6 +131,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:fontFamily="@font/scdream5"
                         android:text="공지사항" />
                 </LinearLayout>
             </LinearLayout>
@@ -159,6 +160,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:fontFamily="@font/scdream5"
                         android:text="정보관리" />
                 </LinearLayout>
 
@@ -181,6 +183,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
+                        android:fontFamily="@font/scdream5"
                         android:text="로그아웃" />
                 </LinearLayout>
             </LinearLayout>
