@@ -20,13 +20,13 @@
         android:theme="@style/Theme.Flogging"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".VolunteerDetailActivity"
+            android:exported="false" />
+        <activity
             android:name=".home.PointListActivity"
             android:exported="false" />
         <activity
             android:name=".home.ExchangeActivity"
-            android:exported="false" />
-        <activity
-            android:name=".map.CustomSpinnerAdapter"
             android:exported="false" />
         <activity
             android:name=".map.MapFeedbackActivity"
