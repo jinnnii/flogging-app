@@ -7,4 +7,10 @@
         <item>조금 많다</item>
         <item>매우 많다</item>
     </string-array>
+
+    <string-array name="region_array">
+        <item>지역 전체</item>
+        <item>서울</item>
+        <item>부산</item>
+    </string-array>
 </resources>

@@ -12,10 +12,10 @@
         android:id="@+id/backBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_back_btn"
-        android:layout_marginTop="30dp"
         android:layout_marginLeft="15dp"
-        android:background="#00ffffff"/>
+        android:layout_marginTop="30dp"
+        android:background="#00ffffff"
+        app:srcCompat="@drawable/ic_back_btn" />
 
     <LinearLayout
         android:layout_alignTop="@id/backBtn"
