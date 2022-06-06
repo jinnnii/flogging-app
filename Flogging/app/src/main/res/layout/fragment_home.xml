@@ -9,7 +9,13 @@
     android:padding="30dp"
     tools:context=".home.HomeFragment">
 
+<<<<<<< HEAD
     <FrameLayout
+=======
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/testTV"
+>>>>>>> b6e5073cebe73c82ad2355939d2722174e8ad752
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
