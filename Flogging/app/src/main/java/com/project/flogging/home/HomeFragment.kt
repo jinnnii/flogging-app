@@ -33,32 +33,30 @@ class HomeFragment : Fragment() {
             context?.startActivity(intent)
         }
 
-        // 쓰다담 배너 클릭
-        binding.banner.setOnClickListener {
-
-        }
         // 활동기록 클릭
         binding.myRecord.setOnClickListener {
-
+            val intent= Intent(context, HomeHistoryActivity::class.java)
+            context?.startActivity(intent)
         }
         // 모집활동 클릭
         binding.activityList.setOnClickListener {
-
+            val intent= Intent(context, HomeRecruitmentActivity::class.java)
+            context?.startActivity(intent)
         }
-        val networkService = (activity?.applicationContext as SpringApplication).networkService
-        val testCall = networkService.doTest()
-
-        testCall.enqueue(object : Callback<MessageModel> {
-            override fun onResponse(call: Call<MessageModel>, response: Response<MessageModel>) {
-                binding.testTV.setText(response.body()?.test)
-            }
-
-            override fun onFailure(call: Call<MessageModel>, t: Throwable) {
-                call.cancel()
-            }
-
-
-        })
+//        val networkService = (activity?.applicationContext as SpringApplication).networkService
+//        val testCall = networkService.doTest()
+//
+//        testCall.enqueue(object : Callback<MessageModel> {
+//            override fun onResponse(call: Call<MessageModel>, response: Response<MessageModel>) {
+//                binding.testTV.setText(response.body()?.message)
+//            }
+//
+//            override fun onFailure(call: Call<MessageModel>, t: Throwable) {
+//                call.cancel()
+//            }
+//
+//
+//        })
 
         return binding.root
     }

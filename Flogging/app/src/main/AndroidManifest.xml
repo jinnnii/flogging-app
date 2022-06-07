@@ -27,7 +27,9 @@
             android:exported="false" />
         <activity
             android:name=".home.ExchangeActivity"
-            android:name=".HomeAttractionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".home.HomeAttractionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -53,9 +55,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".map.CustomSpinnerAdapter"
-            android:exported="false" />
         <activity
             android:name=".map.MapFeedbackActivity"
             android:exported="false" />
