@@ -33,10 +33,8 @@ import com.google.android.gms.tasks.CancellationTokenSource
 import com.google.android.gms.tasks.OnTokenCanceledListener
 import com.project.flogging.R
 import com.project.flogging.databinding.FragmentMapsBinding
-import com.project.flogging.model.Flogging
 import com.project.flogging.model.FloggingUser
 import com.project.flogging.model.Road
-import com.project.flogging.model.User
 import kotlin.math.pow
 
 class MapsFragment : Fragment() {
@@ -153,7 +151,7 @@ class MapsFragment : Fragment() {
             endTime=System.currentTimeMillis()
             val timeSec =  SystemClock.elapsedRealtime()-binding.time.base
             val userFlogging = FloggingUser(
-                null,distance, endTime, startTime, timeSec, User(), roadList
+                null, distance, endTime, startTime, timeSec, roadList
             )
 
             val intent= Intent(context, MapResultActivity::class.java)
@@ -171,19 +169,19 @@ class MapsFragment : Fragment() {
         mapFragment?.getMapAsync(callback)
     }
 
-    /**
-     * 지도에 마크 찍기
-     */
-    private fun drawMark(floggingList:List<Flogging>){
-        for (flogging in floggingList){
-            val lat = flogging.latitude
-            val lng = flogging.longitude
-            val pos = LatLng(lat,lng)
-            val markOptions=MarkerOptions()
-            markOptions.icon(bitmapDescriptorFromVector(context,R.drawable.ic_default_mark))
-            mMap?.addMarker(markOptions.position(pos))
-        }
-    }
+//    /**
+//     * 지도에 마크 찍기
+//     */
+//    private fun drawMark(floggingList:List<FloggingUser>){
+//        for (flogging in floggingList){
+//            val lat = flogging.latitude
+//            val lng = flogging.longitude
+//            val pos = LatLng(lat,lng)
+//            val markOptions=MarkerOptions()
+//            markOptions.icon(bitmapDescriptorFromVector(context,R.drawable.ic_default_mark))
+//            mMap?.addMarker(markOptions.position(pos))
+//        }
+//    }
     /**
      * 마커 아이콘 Bitmap으로 변경
      */

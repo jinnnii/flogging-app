@@ -7,5 +7,5 @@ data class Road(
     var latitude:Double=0.0,
     var longitude:Double=0.0,
     var time:Long=0,
-    var flogging: FloggingUser?=FloggingUser(),
+    var flogging: FloggingUser? = FloggingUser(),
         ):Serializable
