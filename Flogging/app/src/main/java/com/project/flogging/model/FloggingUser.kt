@@ -9,6 +9,6 @@ data class FloggingUser(
     var endTime:Long=0,
     var startTime:Long=0,
     var time:Long=0,
-    var user:User = User(),
+    var user:User?,
     var road:ArrayList<Road> = arrayListOf()
         ):Serializable

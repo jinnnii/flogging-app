@@ -19,4 +19,11 @@ interface INetworkService {
         @Query("username") username:String,
         @Query("pointHistory") pointHistory: PointHistory
     ):Call<User>
+
+//    피드백 저장, 리턴값은 success, user정보는 flogingUser의 user에서 빼서 쓰면되니까 feedback의 user는 지움
+    @POST("flogingUser/feedback")
+    fun insertFeedback(
+        @Query("username") username:String,
+        @Body feedback: Feedback
+    ):Call<MessageModel>
 }

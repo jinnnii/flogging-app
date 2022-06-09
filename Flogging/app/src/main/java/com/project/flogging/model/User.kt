@@ -3,7 +3,7 @@ package com.project.flogging.model
 import java.io.Serializable
 
 data class User (
-    var userId:Long=0,
+    var id:Long=0,
     var username:String="",
     var address:String="",
     var email:String="",
