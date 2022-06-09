@@ -5,6 +5,10 @@ import retrofit2.Call
 import retrofit2.http.*
 
 interface INetworkService {
+//    회원가입하면 스프링에 저장할 것들
+    @POST("user/join")
+    fun joinUser(@Body user: User):Call<MessageModel>
+
 //    유저네임으로 유저객체 하나 받아오기
     @GET("user/getUser/{username}")
     fun findUser(@Path("username") user: User):Call<User>
