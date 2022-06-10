@@ -32,9 +32,12 @@ import com.google.android.gms.tasks.CancellationToken
 import com.google.android.gms.tasks.CancellationTokenSource
 import com.google.android.gms.tasks.OnTokenCanceledListener
 import com.project.flogging.R
+import com.project.flogging.SpringApplication
 import com.project.flogging.databinding.FragmentMapsBinding
-import com.project.flogging.model.FloggingUser
-import com.project.flogging.model.Road
+import com.project.flogging.model.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import kotlin.math.pow
 
 class MapsFragment : Fragment() {
@@ -123,7 +126,6 @@ class MapsFragment : Fragment() {
             //현재 시각 저장
             startTime = System.currentTimeMillis()
 
-            // todo  최소 10초, 최소 10m 마다 위치 확인
             manager= activity?.getSystemService(Context.LOCATION_SERVICE) as LocationManager
             manager?.requestLocationUpdates(LocationManager.GPS_PROVIDER, 5000L, 0f, listener)
         }
@@ -150,12 +152,30 @@ class MapsFragment : Fragment() {
         binding.stopBtn.setOnClickListener {
             endTime=System.currentTimeMillis()
             val timeSec =  SystemClock.elapsedRealtime()-binding.time.base
-            val userFlogging = FloggingUser(
-                null, distance, endTime, startTime, timeSec, roadList
+            val flogingUser = FloggingUserDTO(
+                distance, endTime, startTime, timeSec
             )
+            Log.d("pj",flogingUser.toString())
+            Log.d("pj",roadList.toString())
+            val networkService = (activity?.applicationContext as SpringApplication).networkService
+            val testCall = networkService.insertFlogingUser(distance,timeSec, startTime, endTime,roadList,"test")
+
+            testCall.enqueue(object : Callback<MessageModel> {
+                override fun onResponse(
+                    call: Call<MessageModel>,
+                    response: Response<MessageModel>
+                ) {
+                    Log.d("pj","success")
+                }
+
+                override fun onFailure(call: Call<MessageModel>, t: Throwable) {
+                    Log.d("pj","failed")
+                }
+
+            })
 
             val intent= Intent(context, MapResultActivity::class.java)
-            intent.putExtra("flogging", userFlogging)
+            intent.putExtra("flogging", flogingUser)
             startActivityForResult(intent,3000)
         }
 

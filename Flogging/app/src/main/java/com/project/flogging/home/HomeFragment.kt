@@ -18,6 +18,8 @@ import retrofit2.Response
 
 class HomeFragment : Fragment() {
     lateinit var binding: FragmentHomeBinding
+    lateinit var user:User
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -51,6 +53,8 @@ class HomeFragment : Fragment() {
         testCall.enqueue(object : Callback<User> {
 
             override fun onResponse(call: Call<User>, response: Response<User>) {
+                user= response.body()!!
+                binding.point.text= user.point.toString()
                 Log.d("pj", "success::::${response.body()?.toString()!!}")
             }
 

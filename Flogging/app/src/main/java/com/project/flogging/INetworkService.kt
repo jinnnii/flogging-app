@@ -11,7 +11,12 @@ interface INetworkService {
 
 //    플로깅 유저 저장, 플로깅 유저랑 로드리스트는 따로 분리해서 보내주세요. 리턴값은 success 입니다.
     @POST("flogingUser/insert")
-    fun insertFlogingUser(@Body flogingUser:FloggingUser, @Body roads:List<Road>):Call<MessageModel>
+    fun insertFlogingUser(
+    @Query("distance")distance:Double,
+    @Query("time")time:Long,
+    @Query("startTime")startTime:Long,
+    @Query("endTime")endTime:Long,
+    @Body roads:List<Road>,@Query("username")username:String):Call<MessageModel>
     
 //    포인트 적립+내역 볼 수 있음
     @POST("user/point")
@@ -25,5 +30,10 @@ interface INetworkService {
     fun insertFeedback(
         @Query("username") username:String,
         @Body feedback: Feedback
+    ):Call<MessageModel>
+
+    @POST("flogingUser/test")
+    fun test(
+        @Body flogingUser:FlogingUser
     ):Call<MessageModel>
 }

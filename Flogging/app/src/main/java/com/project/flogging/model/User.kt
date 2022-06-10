@@ -9,5 +9,5 @@ data class User (
     var email:String="",
     var point:Long=0,
     var role:String="",
-    var pointHistories:List<PointHistory>
+    var pointHistories:List<PointHistory> = arrayListOf()
         ):Serializable
